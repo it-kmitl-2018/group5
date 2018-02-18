@@ -25,11 +25,11 @@ if (ch == 'a' || ch == 'e' || ch == 'i'
     || ch == 'o' || ch == 'u') {
 ```
 ### การตั้งชื่อ
-- ชื่อ class ชื่อ แพคเกต ขึ้นต้นตัวใหญ่
+- ชื่อ class ชื่อ แพคเกต ขึ้นต้นตัวใหญ่ เป็นแบบ Upper-Camel Case
 ```
 package Week1;
 
-public class Count_vowel {
+public class Count_Vowel {
 }
 ```
 - ในการตั้งชื่อทุกอย่างในโปรเจดจะใช้อันเดอร์สกอร์และหลังอันเดอร์สกอร์จะเป็นตัวเล็ก เช่น variable_example
@@ -50,3 +50,7 @@ package test.test.test;
 import java.util.*;
 ```
 - เว้นวรรค 1 ครั้งระหว่าง condition และใน 1 บรรทัดจะมีไม่เกิน 3 condition ถ้าเกินก็เว้นบรรทัดลงไป
+```
+if (ch == 'a' || ch == 'e' || ch == 'i'
+    || ch == 'o' || ch == 'u') {
+```
