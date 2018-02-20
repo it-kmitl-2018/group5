@@ -1,13 +1,13 @@
-package th.ac.kmitl.it.group5.etaxinvoice;
+package th.ac.kmitl.it.soa.group5.etaxinvoice.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class GreetingETaxController {
+public class Version {
 
     @RequestMapping("/")
-    public String greetingETax() {
-        return "greetingETax";
+    public String version() {
+        return "version";
     }
 }

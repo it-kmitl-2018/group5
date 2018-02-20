@@ -1,4 +1,4 @@
-package th.ac.kmitl.it.group5.etaxinvoice;
+package th.ac.kmitl.it.soa.group5.etaxinvoice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
