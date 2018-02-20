@@ -1,6 +1,7 @@
 ﻿# Team Convention กลุ่มที่ : 5
 - ใช้ภาษา Java
-- Program ที่ใช้ในการพัฒนา Netbeans
+- โปรแกรมที่ใช้ในการพัฒนา IntelliJ IDEA
+
 <p align="center">
     <img alt="Java banner" title="Java banner" src="https://4a7efb2d53317100f611-1d7064c4f7b6de25658a4199efb34975.ssl.cf1.rackcdn.com/patch-or-perish-java-ftc-tells-oracle-showcase_image-1-p-2014.jpg" width="400">
 </p>
@@ -32,7 +33,7 @@ package Week1;
 public class CountVowel {
 }
 ```
-- ในการตั้งชื่อตัวแปรในโปรเจดจะใช้อันเดอร์สกอร์และหลังอันเดอร์สกอร์จะเป็นตัวเล็ก เช่น variable_example
+- ในการตั้งชื่อตัวแปรในโปรเจดจะใช้ Camel Case ex. > countNumber
 - ตัวแปรทั้งหมดจะต้องสื่อความหมาย
 ### อื่นๆ
 - จำกัดตัวอักษร 100 ตัวอักษรต่อ 1 บรรทัด
@@ -54,3 +55,12 @@ import java.util.*;
 if (ch == 'a' || ch == 'e' || ch == 'i'
     || ch == 'o' || ch == 'u') {
 ```
+### Commit Message
+- ขึ้นต้นด้วยตัวใหญ่
+- ไม่ลงท้ายด้วย "." 
+- แต่ละ commit ต้องสื่อความหมายว่าได้เพิ่ม เปลี่ยนแปลง หรือแก้ไขอะไรไปบ้าง
+
+### Pull request
+- ขึ้นต้นด้วยตัวใหญ่
+- ไม่ลงท้ายด้วย "." 
+- แต่ละ pull request ต้องสื่อความหมาย
