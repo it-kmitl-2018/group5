@@ -1,12 +1,14 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
+import java.sql.Timestamp;
+
 public class ExchangedDocument {
 
     public String id;
     public String name;
     public String typeCode;
-    public String issueDateTime;
-    public String createDateTime;
+    public Timestamp issueDateTime;
+    public Timestamp createDateTime;
 
     public ExchangedDocument() {
     }
@@ -35,19 +37,19 @@ public class ExchangedDocument {
         this.typeCode = typeCode;
     }
 
-    public String getIssueDateTime() {
+    public Timestamp getIssueDateTime() {
         return issueDateTime;
     }
 
-    public void setIssueDateTime(String issueDateTime) {
+    public void setIssueDateTime(Timestamp issueDateTime) {
         this.issueDateTime = issueDateTime;
     }
 
-    public String getCreateDateTime() {
+    public Timestamp getCreateDateTime() {
         return createDateTime;
     }
 
-    public void setCreateDateTime(String createDateTime) {
+    public void setCreateDateTime(Timestamp createDateTime) {
         this.createDateTime = createDateTime;
     }
 }

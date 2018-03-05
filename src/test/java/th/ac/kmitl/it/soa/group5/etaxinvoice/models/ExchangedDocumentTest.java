@@ -1,15 +1,21 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 import org.junit.Test;
+
+import java.sql.Timestamp;
+
 import static org.junit.Assert.*;
 
 public class ExchangedDocumentTest {
 
+
     private String id = "RDTIV0575526000058001";
     private String name = "ใบกำกับภาษี";
     private String typeCode = "388";
-    private String issueDateTime = "2016-09-12T19:19:25.0";
-    private String createDateTime = "2016-09-12T15:51:26.0";
+    private Timestamp issueDateTime = new Timestamp(System.currentTimeMillis());
+    private Timestamp createDateTime = new Timestamp(System.currentTimeMillis());
+
+
 
     @Test
     public void getValueFromExchangedDocumentModel(){
