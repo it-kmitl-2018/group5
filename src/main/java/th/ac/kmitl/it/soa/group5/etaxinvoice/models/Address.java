@@ -1,6 +1,7 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 public class Address {
+
     private String buildingNumber;
     private String alley;
     private String villageNo;
@@ -9,7 +10,7 @@ public class Address {
     private String cityID;
     private String countrySubDivisionID;
     private String countryID;
-    private String postcodeCode;
+    private String postcode;
 
     public Address() {
     }
@@ -78,11 +79,11 @@ public class Address {
         this.countryID = countryID;
     }
 
-    public String getPostcodeCode() {
-        return postcodeCode;
+    public String getPostcode() {
+        return postcode;
     }
 
-    public void setPostcodeCode(String postcodeCode) {
-        this.postcodeCode = postcodeCode;
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 }

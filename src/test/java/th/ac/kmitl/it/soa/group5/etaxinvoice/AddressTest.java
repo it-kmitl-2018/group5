@@ -15,10 +15,11 @@ public class AddressTest {
     private String cityID = "1011";
     private String countrySubDivisionID = "10";
     private String countryID = "TH";
-    private String postcodeCode = "10520";
+    private String postcode = "10520";
 
     @Test
     public void getValueFormAddressModel() {
+
         Address address = new Address();
         address.setBuildingNumber(this.buildingNumber);
         address.setAlley(this.alley);
@@ -28,7 +29,7 @@ public class AddressTest {
         address.setCityID(this.cityID);
         address.setCountrySubDivisionID(this.countrySubDivisionID);
         address.setCountryID(this.countryID);
-        address.setPostcodeCode(this.postcodeCode);
+        address.setPostcode(this.postcode);
 
         assertEquals(buildingNumber, address.getBuildingNumber());
         assertEquals(alley, address.getAlley());
@@ -38,6 +39,6 @@ public class AddressTest {
         assertEquals(cityID, address.getCityID());
         assertEquals(countrySubDivisionID, address.getCountrySubDivisionID());
         assertEquals(countryID, address.getCountryID());
-        assertEquals(postcodeCode, address.getPostcodeCode());
+        assertEquals(postcode, address.getPostcode());
     }
 }
