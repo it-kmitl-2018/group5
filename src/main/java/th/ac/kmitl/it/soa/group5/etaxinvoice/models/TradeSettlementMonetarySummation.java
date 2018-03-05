@@ -1,6 +1,7 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 public class TradeSettlementMonetarySummation {
+    
     private float lineTotalAmount;
     private float taxBasisTotalAmount;
     private float taxTotalAmount;
