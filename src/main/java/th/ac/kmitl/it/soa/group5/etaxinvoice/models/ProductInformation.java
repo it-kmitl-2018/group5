@@ -1,6 +1,7 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 public class ProductInformation {
+
     public String productID;
     public String productGlobalID;
     public String productDetails;

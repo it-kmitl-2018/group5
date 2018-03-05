@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductInformationTests {
+
     private String productID = "productID";
     private String productGlobalID = "productGlobalID";
     private String productDetails = "productDetails";
