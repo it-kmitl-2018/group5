@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Product Information</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<h3>Specified CI Trade Product</h3>
+		<p>ID: <input type="text" name="productID" size="40" maxlength="35"></p>
+		<p>Global ID: <input type="text" name="productGlobalID" size="40"
+							 maxlength="35"></p>
+		<p>Name: </p>
+		<textarea style="resize:none" rows="2" cols="86" maxlength="256" name="productDetails">
+		</textarea><br>
+		<h3>Individual CI Trade Product Instance</h3>
+		<p>Batch ID: <input type="text" name="batchID" size="40" maxlength="35"></p>
+		<p>Expiry Date Time: <input type="date" name="expiryDate"></p>
+		<h3>Origin CI Trade Country</h3>
+		<p>ID: <input type="text" name="originCITradeCountry" size="4" maxlength="5"></p>
+		<h3>Information CI Note</h3>
+		<p>Subject: </p>
+		<textarea style="resize:none" rows="4" cols="100" maxlength="500"
+				  name="informationCISubject"></textarea><br>
+		<p>Content: </p>
+		<textarea style="resize:none" rows="4" cols="100" maxlength="500"
+				  name="informationCIContent"></textarea><br><br>
+		<button type="button">Next</button> 
+	</body>
+</html> 
