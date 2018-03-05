@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Version {
+public class IndexController {
 
-    @RequestMapping("/version")
-    public String version() {
-        return "version";
+    @RequestMapping("/")
+    public String index() {
+        return "index";
     }
 }
