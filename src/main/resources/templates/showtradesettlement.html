@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Show Trade Statement</title>
+    <title>Show Trade Settlement</title>
 </head>
 <body>
 <div>
@@ -12,7 +12,7 @@
     <p th:text="'ยอดเงินรวม: ' + ${tradeSettlementMonetarySummation.grandTotalAmount}" />
     <p th:text="'ส่วนลดทั้งหมด: ' + ${tradeSettlementMonetarySummation.allowanceTotalAmount}" />
     <p th:text="'ค่าธรรมเนียมทั้งหมด: ' + ${tradeSettlementMonetarySummation.chargeTotalAmount}" />
-    <a href="/create/statement">Submit another trade statement</a>
+    <a href="/create/statement">Submit another trade settlement</a>
 </div>
 </body>
 </html>

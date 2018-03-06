@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import th.ac.kmitl.it.soa.group5.etaxinvoice.models.TradeSettlementMonetarySummation;
 
 @Controller
-public class TradeStatement {
+public class TradeSettlement {
 
-    @GetMapping("create/statement")
+    @GetMapping("create/settlement")
     public String create(Model model) {
         model.addAttribute("tradeSettlementMonetarySummation",new TradeSettlementMonetarySummation());
-        return "createtradestatement";
+        return "createtradesettlement";
     }
 
-    @PostMapping("create/statement")
+    @PostMapping("create/settlement")
     public String create(@ModelAttribute TradeSettlementMonetarySummation tradeSettlementMonetarySummation) {
-        return "showtradestatement";
+        return "showtradesettlement";
     }
 }

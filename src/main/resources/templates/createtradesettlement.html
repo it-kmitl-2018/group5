@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Create Trade Statement</title>
+    <title>Create Trade Settlement</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Create Trade Statement</h1>
-<form method="post" action="/create/statement" th:object="${tradeSettlementMonetarySummation}">
+<h1>Create Trade Settlement</h1>
+<form method="post" action="/create/settlement" th:object="${tradeSettlementMonetarySummation}">
     <div>
         <label>รวมมูลค่าตามรายการ</label>
         <input type="text" th:field="*{lineTotalAmount}"/>
