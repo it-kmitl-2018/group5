@@ -10,13 +10,13 @@ import th.ac.kmitl.it.soa.group5.etaxinvoice.models.TradeSettlementMonetarySumma
 @Controller
 public class TradeSettlement {
 
-    @GetMapping("create/settlement")
+    @GetMapping("/create/settlement")
     public String create(Model model) {
         model.addAttribute("tradeSettlementMonetarySummation",new TradeSettlementMonetarySummation());
         return "createtradesettlement";
     }
 
-    @PostMapping("create/settlement")
+    @PostMapping("/create/settlement")
     public String create(@ModelAttribute TradeSettlementMonetarySummation tradeSettlementMonetarySummation) {
         return "showtradesettlement";
     }
