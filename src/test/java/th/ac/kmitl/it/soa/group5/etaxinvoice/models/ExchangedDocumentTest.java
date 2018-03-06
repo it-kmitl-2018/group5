@@ -1,9 +1,8 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 import org.junit.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import java.sql.Timestamp;
-import static org.junit.Assert.*;
 
 public class ExchangedDocumentTest {
 
@@ -15,19 +14,19 @@ public class ExchangedDocumentTest {
 
     @Test
     public void getValueFromExchangedDocumentModel(){
-        ExchangedDocument exchangedDocument = new ExchangedDocument();
-        exchangedDocument.setId(this.id);
-        exchangedDocument.setName(this.name);
-        exchangedDocument.setTypeCode(this.typeCode);
-        exchangedDocument.setIssueDateTime(this.issueDateTime);
-        exchangedDocument.setCreateDateTime(this.createDateTime);
+        ExchangedDocument.Builder builder = new ExchangedDocument.Builder();
+        ExchangedDocument exdoc = builder
+                .id(this.id)
+                .name(this.name)
+                .typeCode(this.typeCode)
+                .issueDateTime(this.issueDateTime)
+                .createDateTime(this.createDateTime)
+                .build();
 
-        assertEquals(id, exchangedDocument.getId());
-        assertEquals(name, exchangedDocument.getName());
-        assertEquals(typeCode, exchangedDocument.getTypeCode());
-        assertEquals(issueDateTime, exchangedDocument.getIssueDateTime());
-        assertEquals(createDateTime, exchangedDocument.getCreateDateTime());
-
+        assertEquals(this.id, exdoc.id);
+        assertEquals(this.name, exdoc.name);
+        assertEquals(this.typeCode, exdoc.typeCode);
+        assertEquals(this.issueDateTime, exdoc.issueDateTime);
+        assertEquals(this.createDateTime, exdoc.createDateTime);
     }
-
 }
