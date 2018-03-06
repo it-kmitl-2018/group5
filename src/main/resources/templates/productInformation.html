@@ -4,17 +4,34 @@
 		<title>Product Information</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
+	<script>
+        function validateForm() {
+            var inputProductInformation = document.forms["ProductInformation"]
+				["productInformation"].value;
+            var inputProductDetails = document.forms["ProductInformation"]
+                ["productInformation"].value;
+            if (inputProductInformation == "") {
+                alert("Specified CI Trade Product must be filled out");
+                return false;
+            }
+            else if (inputProductDetails == ""){
+                alert("Name must be filled out");
+                return false;
+			}
+        }
+	</script>
 	<body>
-		<form id ="ProductInformation" method="get">
+		<form id ="ProductInformation" onsubmit="return validateForm()" method="get">
 			<p>Specified CI Trade Product: </p>
-			<textarea style="resize:none" rows="4" cols="100" name="productInformation"></textarea>
-			<br>
+			<textarea style="resize:none" rows="3" cols="100" maxlength="500"
+					  name="productInformation" required>
+			</textarea>
 			<p>ID: <input type="text" name="productID" size="40" maxlength="35"></p>
 			<p>Global ID: <input type="text" name="productGlobalID" size="40"
 								 maxlength="35"></p>
 			<p>Name: </p>
-			<textarea style="resize:none" rows="2" cols="86" maxlength="256" name="productDetails">
-			</textarea><br>
+			<textarea style="resize:none" rows="2" cols="86" maxlength="256" name="productDetails"
+					  required></textarea><br>
 			<p>Individual CI Trade Product Instance :</p>
 			<textarea style="resize:none" rows="4" cols="100" name="productInstance"></textarea>
 			<br>
