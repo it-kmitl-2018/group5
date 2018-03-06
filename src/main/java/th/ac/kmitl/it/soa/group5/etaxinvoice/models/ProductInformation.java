@@ -1,17 +1,55 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
+import java.util.Calendar;
+
 public class ProductInformation {
 
+    public String ciProductInformation;
     public String productID;
     public String productGlobalID;
     public String productDetails;
     public String batchID;
-    public String expiryDate;
+    public String productInstance;
+    public Calendar expiryDate;
     public String originCITradeCountry;
+    public String originCITradeCountryId;
+    public String ciNote;
     public String informationCISubject;
     public String informationCIContent;
 
     public ProductInformation(){
+    }
+
+    public String getCiProductInformation() {
+        return ciProductInformation;
+    }
+
+    public void setCiProductInformation(String ciProductInformation) {
+        this.ciProductInformation = ciProductInformation;
+    }
+
+    public String getProductInstance() {
+        return productInstance;
+    }
+
+    public void setProductInstance(String productInstance) {
+        this.productInstance = productInstance;
+    }
+
+    public String getOriginCITradeCountryId() {
+        return originCITradeCountryId;
+    }
+
+    public void setOriginCITradeCountryId(String originCITradeCountryId) {
+        this.originCITradeCountryId = originCITradeCountryId;
+    }
+
+    public String getCiNote() {
+        return ciNote;
+    }
+
+    public void setCiNote(String ciNote) {
+        this.ciNote = ciNote;
     }
 
     public String getProductID() {
@@ -46,11 +84,11 @@ public class ProductInformation {
         this.batchID = batchID;
     }
 
-    public String getExpiryDate() {
+    public Calendar getExpiryDate() {
         return expiryDate;
     }
 
-    public void setExpiryDate(String expiryDate) {
+    public void setExpiryDate(Calendar expiryDate) {
         this.expiryDate = expiryDate;
     }
 
