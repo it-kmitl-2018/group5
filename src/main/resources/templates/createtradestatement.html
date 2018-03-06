@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Create Trade Statement</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Create Trade Statement</h1>
+<form method="post" action="/create/statement" th:object="${tradeSettlementMonetarySummation}">
+    <div>
+        <label>รวมมูลค่าตามรายการ</label>
+        <input type="text" th:field="*{lineTotalAmount}"/>
+    </div>
+    <div>
+        <label>มูลค่าที่นำมาคิดภาษีมูลค่าเพิ่ม</label>
+        <input type="text" th:field="*{taxBasisTotalAmount}"/>
+    </div>
+    <div>
+        <label>จำนวนภาษีมูลค่าเพิ่ม</label>
+        <input type="text" th:field="*{taxTotalAmount}"/>
+    </div>
+    <div>
+        <label>ยอดเงินรวม</label>
+        <input type="text" th:field="*{grandTotalAmount}"/>
+    </div>
+    <div>
+        <label>ส่วนลดทั้งหมด</label>
+        <input type="text" th:field="*{allowanceTotalAmount}"/>
+    </div>
+
+    <div>
+        <label>ค่าธรรมเนียมทั้งหมด</label>
+        <input type="text" th:field="*{chargeTotalAmount}"/>
+    </div>
+
+    <div>
+        <input type="submit" th:value="create"/>
+    </div>
+
+</form>
+</body>
+</html>
