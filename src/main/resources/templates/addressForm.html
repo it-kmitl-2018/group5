@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Address Form</title>
+</head>
+<body>
+    <h1>Address Form</h1>
+    <form action="#" th:action="@{/addressForm}" th:object="${address}" method="post">
+        <p>บ้านเลขที่: <input type="text" th:field="*{buildingNumber}" /></p>
+        <p>ซอย: <input type="text" th:field="*{alley}" /></p>
+        <p>หมู่: <input type="text" th:field="*{villageNo}" /></p>
+        <p>ถนน: <input type="text" th:field="*{streetName}" /></p>
+        <p>รหัสแขวง: <input type="text" th:field="*{citySubDivisionID}" /></p>
+        <p>รหัสเขต: <input type="text" th:field="*{cityID}" /></p>
+        <p>รหัสจังหวัด: <input type="text" th:field="*{countrySubDivisionID}" /></p>
+        <p>รหัสประเทศ: <input type="text" th:field="*{countryID}" /></p>
+        <p>เลขไปรษณีย์: <input type="text" th:field="*{postcode}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
