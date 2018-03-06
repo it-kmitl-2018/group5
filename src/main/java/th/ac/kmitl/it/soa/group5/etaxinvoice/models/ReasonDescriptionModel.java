@@ -2,9 +2,10 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 import lombok.Getter;
 
-public class ReasonDescription {
+public class ReasonDescriptionModel {
 
     public enum DiscountOrChargeIndentificationCode {
+
         STAMP_DUTY ("28", "ค่าอากรสแตมป์"),
         BANK_CHARGES ("30", "ค่าธรรมเนียมที่เกิดจากการทำุรกรรมกับธนาคาร"),
         MIN_COMMISSION ("52", "ค่าดำเนินการขั้นต่ำ"),
