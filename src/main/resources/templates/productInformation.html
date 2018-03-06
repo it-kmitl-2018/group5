@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Product Information</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<form id ="ProductInformation" method="get">
+			<p>Specified CI Trade Product: </p>
+			<textarea style="resize:none" rows="4" cols="100" name="productInformation"></textarea>
+			<br>
+			<p>ID: <input type="text" name="productID" size="40" maxlength="35"></p>
+			<p>Global ID: <input type="text" name="productGlobalID" size="40"
+								 maxlength="35"></p>
+			<p>Name: </p>
+			<textarea style="resize:none" rows="2" cols="86" maxlength="256" name="productDetails">
+			</textarea><br>
+			<p>Individual CI Trade Product Instance :</p>
+			<textarea style="resize:none" rows="4" cols="100" name="productInstance"></textarea>
+			<br>
+			<p>Batch ID: <input type="text" name="batchID" size="40" maxlength="35"></p>
+			<p>Expiry Date Time: <input type="date" name="expiryDate"></p>
+			<p>Origin CI Trade Country: <input type="text" name="originCITradeCountry" size="40"
+											  maxlength="35"></p>
+			<p>ID: <input type="text" name="originCITradeCountryId" size="4" maxlength="5"></p>
+			<p>Information CI Note: <input type="text" name="ciNote" size="70" maxlength="60"></p>
+			<p>Subject: </p>
+			<textarea style="resize:none" rows="4" cols="100" maxlength="500"
+				  	name="informationCISubject"></textarea><br>
+			<p>Content: </p>
+			<textarea style="resize:none" rows="4" cols="100" maxlength="500"
+				  	name="informationCIContent"></textarea><br><br>
+			<button type="button">Previous Step</button><br>
+			<button type="submit">Next Step</button>
+		</form>
+	</body>
+</html> 

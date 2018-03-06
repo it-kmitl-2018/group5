@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resultcheck>
+    <SpecifiedCITradeProduct>
+
+    </SpecifiedCITradeProduct>
+    <Id>
+
+    </Id>
+    <GlobalID>
+
+    </GlobalID>
+    <Name>
+
+    </Name>
+    <IndividualCITradeProductInstance>
+
+    </IndividualCITradeProductInstance>
+    <BatchID>
+
+    </BatchID>
+    <ExpiryDateTime>
+
+    </ExpiryDateTime>
+    <OriginCITradeCountry>
+
+    </OriginCITradeCountry>
+    <Id>
+
+    </Id>
+    <IncludedCINote>
+
+    </IncludedCINote>
+    <Subject>
+
+    </Subject>
+    <Content>
+
+    </Content>
+</resultcheck>
