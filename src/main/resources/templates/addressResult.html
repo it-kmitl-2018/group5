@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p th:text="'บ้านเลขที่: ' + ${address.buildingNumber}" ></p>
+    <p th:text="'ซอย: ' + ${address.alley}" ></p>
+    <p th:text="'หมู่: ' + ${address.villageNo}" ></p>
+    <p th:text="'ถนน: ' + ${address.streetName}" ></p>
+    <p th:text="'รหัสแขวง: ' + ${address.citySubDivisionID}" ></p>
+    <p th:text="'รหัสเขต: ' + ${address.cityID}" ></p>
+    <p th:text="'รหัสจังหวัด: ' + ${address.countrySubDivisionID}" ></p>
+    <p th:text="'รหัสประเทศ: ' + ${address.countryID}" ></p>
+    <p th:text="'รหัสไปรษณีย์: ' + ${address.postcode}" ></p>
+    <a href="/addressForm">Submit another message</a>
+</body>
+</html>
