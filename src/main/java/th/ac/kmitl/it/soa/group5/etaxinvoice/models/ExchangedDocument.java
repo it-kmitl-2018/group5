@@ -9,9 +9,8 @@ public class ExchangedDocument {
     public String id;
     public String name;
     public String typeCode;
-    public Timestamp issueDateTime;
-    public Timestamp createDateTime;
+    public Timestamp issueDateTime = new Timestamp(System.currentTimeMillis());
+    public Timestamp createDateTime = new Timestamp(System.currentTimeMillis());
 
     public ExchangedDocument() { }
-
 }
