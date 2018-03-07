@@ -16,7 +16,6 @@ public enum DocumentTypeCode {
     RECEIPT_AND_ABBREVIATED_TAX_INVOICE ("T06", "ใบเสร็จรับเงิน/ใบกํากับภําษีอย่างย่อ (Receipt/Abbreviated Tax Invoice)"),
     CANCELLATION_NOTE ("T07", "ใบแจ้งยกเลิก (Cancellation note)");
 
-
     private @Getter String documentCode;
     private @Getter String documentName;
 
