@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Confirm your e-tax invoice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <h1>
+        Confirm your e-tax invoice form
+    </h1>
+    <p th:text="'ID: '+ ${exchangedDocument.id}"></p>
+    <p th:text="'NAME: '+ ${exchangedDocument.name}"></p>
+    <p th:text="'TYPE CODE: '+ ${exchangedDocument.typeCode}"></p>
+    <p th:text="'ISSUE DATETIME: '+ ${exchangedDocument.issueDateTime}"></p>
+
+</body>
+</html>
