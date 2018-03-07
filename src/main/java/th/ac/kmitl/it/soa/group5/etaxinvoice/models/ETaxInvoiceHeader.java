@@ -4,7 +4,7 @@ import lombok.experimental.Builder;
 import java.sql.Timestamp;
 
 @Builder(builderClassName = "Builder")
-public class ExchangedDocument {
+public class ETaxInvoiceHeader {
 
     public String id;
     public String name;

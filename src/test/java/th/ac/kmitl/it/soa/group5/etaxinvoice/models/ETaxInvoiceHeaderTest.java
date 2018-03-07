@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.sql.Timestamp;
 
-public class ExchangedDocumentTest {
+public class ETaxInvoiceHeaderTest {
 
     private String id = "RDTIV0575526000058001";
     private String name = "ใบกำกับภาษี";
@@ -14,8 +14,8 @@ public class ExchangedDocumentTest {
 
     @Test
     public void getValueFromExchangedDocumentModel(){
-        ExchangedDocument.Builder builder = new ExchangedDocument.Builder();
-        ExchangedDocument exdoc = builder
+        ETaxInvoiceHeader.Builder builder = new ETaxInvoiceHeader.Builder();
+        ETaxInvoiceHeader exdoc = builder
                 .id(this.id)
                 .name(this.name)
                 .typeCode(this.typeCode)
