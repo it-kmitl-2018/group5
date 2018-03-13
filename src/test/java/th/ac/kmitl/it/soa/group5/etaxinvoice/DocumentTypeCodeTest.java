@@ -1,6 +1,8 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice;
 
 import org.junit.Test;
+import th.ac.kmitl.it.soa.group5.etaxinvoice.definitions.DocumentTypeCode;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DocumentTypeCodeTest {
