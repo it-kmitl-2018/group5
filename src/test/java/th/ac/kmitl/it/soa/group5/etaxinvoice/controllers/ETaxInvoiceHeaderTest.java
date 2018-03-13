@@ -1,23 +1,42 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.controllers;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mockito.InjectMocks;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ETaxInvoiceHeaderTest {
 
-    @Autowired
+    private String body = "{}";
+
+    private MockMvc mockMvc;
+
+    @InjectMocks
     private ETaxInvoiceHeaderController eTaxInvoiceHeaderController;
 
-    @Test
-    public void contexLoads() throws Exception{
-        assertThat(eTaxInvoiceHeaderController).isNotNull();
+    @Before
+    public void setUp(){
+        mockMvc = MockMvcBuilders.standaloneSetup(eTaxInvoiceHeaderController).build();
     }
 
+    @Test
+    public void shouldGetXML() throws Exception{
+        mockMvc.perform(post("/tax_invoice_header")
+                .accept(MediaType.APPLICATION_XML)
+                .content(body)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML));
+    }
 }

@@ -1,14 +1,14 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.controllers;
 
-import org.springframework.stereotype.Controller;;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 import th.ac.kmitl.it.soa.group5.etaxinvoice.models.ETaxInvoiceHeader;
 import java.sql.Timestamp;
 
-@Controller
+@RestController
 public class ETaxInvoiceHeaderController {
 
-    @GetMapping("/tax_invoice_header")
+    @PostMapping("/tax_invoice_header")
     public ETaxInvoiceHeader eTaxInvoiceHeader() {
         ETaxInvoiceHeader eTaxInvoiceHeader = ETaxInvoiceHeader.builder()
                 .id("RDTIV0575526000058001")
