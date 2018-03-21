@@ -2,7 +2,8 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class TaxInvoiceTests {
 
@@ -22,9 +23,9 @@ public class TaxInvoiceTests {
                 .calculatedAmount(this.calculatedAmount)
                 .build();
 
-        assertEquals(this.typeCode, exdoc.getTypeCode);
-        assertEquals(this.calculatedRate, exdoc.getCalculatedRate);
-        assertEquals(this.basisAmount, exdoc.getBasisAmount);
-        assertEquals(this.calculatedAmount, exdoc.getCalculatedAmount);
+        assertEquals(this.typeCode, exdoc.typeCode);
+        assertEquals(this.calculatedRate, exdoc.calculatedRate);
+        assertEquals(this.basisAmount, exdoc.basisAmount);
+        assertEquals(this.calculatedAmount, exdoc.calculatedAmount);
     }
 }
