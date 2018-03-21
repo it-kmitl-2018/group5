@@ -3,17 +3,17 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.forms;
 import lombok.experimental.Builder;
 
 @Builder(builderClassName = "Builder")
-public class ApplicableTradeTaxForm {
+public class TaxInvoiceForm {
 
     public String typeCode;
     public float calculatedRate;
     public float basisAmount;
     public float calculatedAmount;
 
-    public ApplicableTradeTaxForm() {
+    public TaxInvoiceForm() {
     }
 
-    public ApplicableTradeTaxForm(String typeCode, float calculatedRate, float basisAmount, float calculatedAmount) {
+    public TaxInvoiceForm(String typeCode, float calculatedRate, float basisAmount, float calculatedAmount) {
         this.typeCode = typeCode;
         this.calculatedRate = calculatedRate;
         this.basisAmount = basisAmount;
