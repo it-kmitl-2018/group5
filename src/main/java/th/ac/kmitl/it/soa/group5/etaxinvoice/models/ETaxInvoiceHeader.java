@@ -11,4 +11,5 @@ public class ETaxInvoiceHeader {
     public String typeCode;
     public Timestamp issueDateTime;
     public Timestamp createDateTime;
+    public InvoiceHeaderNote invoiceHeaderNote;
 }
