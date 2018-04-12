@@ -32,7 +32,7 @@ public class ETaxInvoiceHeaderTest {
 
     @Test
     public void shouldGetXML() throws Exception{
-        mockMvc.perform(post("/invoice_header_json")
+        mockMvc.perform(post("/tax_invoice/convert_json")
                 .accept(MediaType.APPLICATION_JSON)
                 .content(body)
                 .contentType(MediaType.APPLICATION_JSON))
