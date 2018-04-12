@@ -6,7 +6,7 @@ import th.ac.kmitl.it.soa.group5.etaxinvoice.forms.ETaxInvoiceHeaderForm;
 @RestController
 public class ETaxInvoiceHeaderController {
 
-    @PostMapping("/header_invoice_json")
+    @PostMapping("/invoice_header_json")
     public ETaxInvoiceHeaderForm eTaxInvoiceHeaderGetJson(@RequestBody ETaxInvoiceHeaderForm form) {
         return form;
     }
