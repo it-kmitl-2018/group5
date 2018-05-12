@@ -1,6 +1,8 @@
-package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
+package th.ac.kmitl.it.soa.group5.etaxinvoice;
 
 import org.junit.Test;
+import th.ac.kmitl.it.soa.group5.etaxinvoice.definitions.ReasonForDiscountOrCharge;
+
 import static org.junit.Assert.*;
 
 public class ReasonForDiscountOrChargeTest {

@@ -1,4 +1,4 @@
-package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
+package th.ac.kmitl.it.soa.group5.etaxinvoice.definitions;
 
 import lombok.Getter;
 
