@@ -11,6 +11,12 @@ public class ETaxInvoiceHeaderTest {
     private String typeCode = "388";
     private Timestamp issueDateTime = new Timestamp(System.currentTimeMillis());
     private Timestamp createDateTime = new Timestamp(System.currentTimeMillis());
+    private String subject = "หมายเหตุ";
+    private String content = "content of included note";
+    private InvoiceHeaderNote invoiceHeaderNote = InvoiceHeaderNote.builder()
+            .subject(this.subject)
+            .content(this.content)
+            .build();
 
     @Test
     public void getValueFromExchangedDocumentModel(){
@@ -21,6 +27,7 @@ public class ETaxInvoiceHeaderTest {
                 .typeCode(this.typeCode)
                 .issueDateTime(this.issueDateTime)
                 .createDateTime(this.createDateTime)
+                .invoiceHeaderNote(this.invoiceHeaderNote)
                 .build();
 
         assertEquals(this.id, exdoc.id);
@@ -28,5 +35,6 @@ public class ETaxInvoiceHeaderTest {
         assertEquals(this.typeCode, exdoc.typeCode);
         assertEquals(this.issueDateTime, exdoc.issueDateTime);
         assertEquals(this.createDateTime, exdoc.createDateTime);
+        assertEquals(this.invoiceHeaderNote, exdoc.invoiceHeaderNote);
     }
 }
