@@ -15,5 +15,13 @@ public enum TaxPayerIdTypeCode {
         this.taxPlayerIdCode = taxPlayerIdCode;
         this.taxPlayerIdName = taxPlayerIdName;
     }
+
+    public String GetName(){
+        return taxPlayerIdName;
+    }
+
+    public String GetCode(){
+        return taxPlayerIdCode;
+    }
 }
 

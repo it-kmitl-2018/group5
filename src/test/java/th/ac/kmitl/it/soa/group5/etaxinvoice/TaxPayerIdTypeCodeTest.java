@@ -13,6 +13,7 @@ public class TaxPayerIdTypeCodeTest {
         assertEquals(TaxPayerIdTypeCode.ID_CARD_NUMBER.getTaxPlayerIdCode(), "NIDN");
         assertEquals(TaxPayerIdTypeCode.PASSPORT_NUMBER.getTaxPlayerIdCode(), "CCPT");
         assertEquals(TaxPayerIdTypeCode.OTHER_ID.getTaxPlayerIdCode(), "OTHR");
+        assertEquals(TaxPayerIdTypeCode.OTHER_ID.getTaxPlayerIdCode(), TaxPayerIdTypeCode.OTHER_ID.GetCode());
     }
 
     @Test
@@ -21,5 +22,6 @@ public class TaxPayerIdTypeCodeTest {
         assertEquals(TaxPayerIdTypeCode.ID_CARD_NUMBER.getTaxPlayerIdName(), "เลขประจำตัวประชาชน 13 หลัก (สำหรับบุคคลธรรมดา)");
         assertEquals(TaxPayerIdTypeCode.PASSPORT_NUMBER.getTaxPlayerIdName(), "เลขหนังสือเดินทาง (Passport)");
         assertEquals(TaxPayerIdTypeCode.OTHER_ID.getTaxPlayerIdName(), "ตัวระบุอื่นๆใช้ในการระบุเอกลักษณ์ผู้ซื้อนอกเหนือจาก Scheme TXID NIDN CCPT หากไม่ต้องการระบุเป็น N/A");
+        assertEquals(TaxPayerIdTypeCode.OTHER_ID.getTaxPlayerIdName(), TaxPayerIdTypeCode.OTHER_ID.GetName());
     }
 }
