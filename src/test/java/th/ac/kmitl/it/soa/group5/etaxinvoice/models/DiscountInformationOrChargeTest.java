@@ -1,7 +1,7 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DiscountInformationOrChargeTest {
 
@@ -12,19 +12,19 @@ public class DiscountInformationOrChargeTest {
 
     @Test
     public void getValuesFromDiscountInformationOrChargeModel() {
-        DiscountInformationOrCharge discountInformationOrCharge =
-                new DiscountInformationOrCharge();
-        discountInformationOrCharge.setChargeIndicator(this.chargeIndicator);
-        discountInformationOrCharge.setActualAmount(this.actualAmount);
-        discountInformationOrCharge.setReasonOfDiscountOrCharge(this.reasonOfDiscountOrCharge);
-        discountInformationOrCharge.setReasonOfDiscountOrChargeCode(
-                this.reasonOfDiscountOrChargeCode);
+        DiscountInformationOrCharge.Builder builder = new DiscountInformationOrCharge.Builder();
+        DiscountInformationOrCharge discountInformationOrCharge = builder
+                .chargeIndicator(this.chargeIndicator)
+                .actualAmount(this.actualAmount)
+                .reasonOfDiscountOrCharge(this.reasonOfDiscountOrCharge)
+                .reasonOfDiscountOrChargeCode(this.reasonOfDiscountOrChargeCode)
+                .build();
 
         assertTrue(this.chargeIndicator);
-        assertEquals(this.actualAmount, discountInformationOrCharge.getActualAmount(), 0);
+        assertEquals(this.actualAmount, discountInformationOrCharge.actualAmount);
         assertEquals(this.reasonOfDiscountOrCharge, discountInformationOrCharge
-                .getReasonOfDiscountOrCharge());
+                .reasonOfDiscountOrCharge);
         assertEquals(this.reasonOfDiscountOrChargeCode, discountInformationOrCharge
-                .getReasonOfDiscountOrChargeCode());
+                .reasonOfDiscountOrChargeCode);
     }
 }

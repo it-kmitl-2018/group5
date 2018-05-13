@@ -1,8 +1,8 @@
 package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
-import lombok.Data;
+import lombok.experimental.Builder;
 
-@Data
+@Builder(builderClassName = "Builder")
 public class DiscountInformationOrCharge {
 
     public boolean chargeIndicator;
