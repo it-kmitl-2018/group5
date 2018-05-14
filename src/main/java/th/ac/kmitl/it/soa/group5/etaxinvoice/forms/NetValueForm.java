@@ -9,4 +9,14 @@ public class NetValueForm {
     public float discount;
     public float charge;
     public float vatRate;
+
+    public NetValueForm() {
+    }
+
+    public NetValueForm(float totalProductValue, float discount, float charge, float vatRate) {
+        this.totalProductValue = totalProductValue;
+        this.discount = discount;
+        this.charge = charge;
+        this.vatRate = vatRate;
+    }
 }
