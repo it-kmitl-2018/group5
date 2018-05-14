@@ -27,6 +27,12 @@ public enum TaxPayerIdTypeCode {
     }
 
     public static TaxPayerIdTypeCode parse(String taxPlayerIdCode) {
+        TaxPayerIdTypeCode taxPayerIdTypeCode = mapper.get(taxPlayerIdCode);
+
+        if (taxPayerIdTypeCode == null) {
+            throw new IllegalArgumentException("There is no value with name " + taxPlayerIdCode);
+        }
+
         return mapper.get(taxPlayerIdCode);
     }
 }
