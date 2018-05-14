@@ -2,6 +2,9 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.definitions;
 
 import lombok.Getter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum ReferenceTypeCode {
     
     INVOICE_NUMBER ("IV", "เลขใบแจ้งหนี้"),
@@ -20,5 +23,22 @@ public enum ReferenceTypeCode {
     ReferenceTypeCode(String referenceCode, String referenceName) {
         this.referenceCode = referenceCode;
         this.referenceName = referenceName;
+    }
+
+    public static Map<String, ReferenceTypeCode> mapper = new HashMap<>();
+    static {
+        for (ReferenceTypeCode referenceTypeCode : ReferenceTypeCode.values()) {
+            mapper.put(referenceTypeCode.getReferenceCode(), referenceTypeCode);
+        }
+    }
+
+    public static ReferenceTypeCode parse(String referenceCode) {
+        ReferenceTypeCode referenceTypeCode = mapper.get(referenceCode);
+
+        if (referenceTypeCode == null) {
+            throw new IllegalArgumentException("There is no value with name " + referenceCode);
+        }
+
+        return mapper.get(referenceCode);
     }
 }

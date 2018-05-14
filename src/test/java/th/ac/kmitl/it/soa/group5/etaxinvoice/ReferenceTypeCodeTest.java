@@ -4,20 +4,21 @@ import org.junit.Test;
 import th.ac.kmitl.it.soa.group5.etaxinvoice.definitions.ReferenceTypeCode;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ReferenceTypeCodeTest {
 
     @Test
     public void shouldGetCorrectCode(){
-        assertEquals(ReferenceTypeCode.INVOICE_NUMBER.getReferenceCode(), "IV");
-        assertEquals(ReferenceTypeCode.REFERENCE_NUMBER_OF_DOCUMENT.getReferenceCode(), "LC");
-        assertEquals(ReferenceTypeCode.BARCODE_SERIAL_NUMBER.getReferenceCode(), "LS");
-        assertEquals(ReferenceTypeCode.ORDER_NUMBER.getReferenceCode(), "ON");
-        assertEquals(ReferenceTypeCode.IDENTICAL_ITEM_NUMBER.getReferenceCode(), "SE");
-        assertEquals(ReferenceTypeCode.PREVIOUS_TAX_NUMBER.getReferenceCode(), "ALT");
-        assertEquals(ReferenceTypeCode.DEBIT_NOTE_NUMBER.getReferenceCode(), "DL");
-        assertEquals(ReferenceTypeCode.CREDIT_NOTE_NUMBER.getReferenceCode(), "CD");
-        assertEquals(ReferenceTypeCode.ORTHER_REFERENCE_NUMBER.getReferenceCode(), "ZZZ");
+        assertEquals(ReferenceTypeCode.INVOICE_NUMBER, ReferenceTypeCode.parse("IV"));
+        assertEquals(ReferenceTypeCode.REFERENCE_NUMBER_OF_DOCUMENT, ReferenceTypeCode.parse("LC"));
+        assertEquals(ReferenceTypeCode.BARCODE_SERIAL_NUMBER, ReferenceTypeCode.parse("LS"));
+        assertEquals(ReferenceTypeCode.ORDER_NUMBER, ReferenceTypeCode.parse("ON"));
+        assertEquals(ReferenceTypeCode.IDENTICAL_ITEM_NUMBER, ReferenceTypeCode.parse("SE"));
+        assertEquals(ReferenceTypeCode.PREVIOUS_TAX_NUMBER, ReferenceTypeCode.parse("ALT"));
+        assertEquals(ReferenceTypeCode.DEBIT_NOTE_NUMBER, ReferenceTypeCode.parse("DL"));
+        assertEquals(ReferenceTypeCode.CREDIT_NOTE_NUMBER, ReferenceTypeCode.parse("CD"));
+        assertEquals(ReferenceTypeCode.ORTHER_REFERENCE_NUMBER, ReferenceTypeCode.parse("ZZZ"));
     }
 
     @Test
@@ -31,5 +32,11 @@ public class ReferenceTypeCodeTest {
         assertEquals(ReferenceTypeCode.DEBIT_NOTE_NUMBER.getReferenceName(), "หมายเลขใบเพิ่มหนี้");
         assertEquals(ReferenceTypeCode.CREDIT_NOTE_NUMBER.getReferenceName(), "หมายเลขใบลดหนี้");
         assertEquals(ReferenceTypeCode.ORTHER_REFERENCE_NUMBER.getReferenceName(), "เอกสารอื่นๆ");
+    }
+
+    @Test
+    public void shouldThrowException(){
+        IllegalArgumentException e = assertThrows(
+                IllegalArgumentException.class, () -> ReferenceTypeCode.parse("XXX"));
     }
 }
