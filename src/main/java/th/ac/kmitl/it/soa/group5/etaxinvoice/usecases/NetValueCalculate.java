@@ -8,8 +8,8 @@ public class NetValueCalculate {
     float discountCalculate = netVal.discountCalculate();
     float chargeCalculate = netVal.chargeCalculate();
     float vatRate = netVal.vatRate();
-    float netAmountNoneVat = netVal.netAmountNoneVat();
-    float vat = netVal.vat();
+    float netAmountNoneVatCalculate = netVal.netAmountNoneVatCalculate();
+    float vatCalculate = netVal.vatCalculate();
     float netValueCalculate = netVal.netValueCalculate();
 
     public float totalProductValue() {
@@ -38,18 +38,18 @@ public class NetValueCalculate {
         return vatRate;
     }
 
-    public float netAmountNoneVat() {
-        float netAmountNoneVat = (totalProductValue - discountCalculate) + chargeCalculate;
-        return netAmountNoneVat;
+    public float netAmountNoneVatCalculate() {
+        float netAmountNoneVatCal = (totalProductValue - discountCalculate) + chargeCalculate;
+        return netAmountNoneVatCal;
     }
 
-    public float vat() {
-        float vat = (vatRate * netAmountNoneVat)/100;
-        return vat;
+    public float vatCalculate() {
+        float vatCal = (vatRate * netAmountNoneVatCalculate)/100;
+        return vatCal;
     }
 
     public float netValueCalculate() {
-        float netValueCalculate = netAmountNoneVat + vat;
+        float netValueCalculate = netAmountNoneVatCalculate + vatCalculate;
         return netValueCalculate;
     }
 }
