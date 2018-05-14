@@ -9,7 +9,7 @@ public class TaxPayerIdTypeCodeTest {
 
     @Test
     public void shouldGetCorrectCode(){
-        assertEquals(TaxPayerIdTypeCode.TAX_ID.getTaxPlayerIdCode(), "TXID");
+        assertEquals(TaxPayerIdTypeCode.TAX_ID , TaxPayerIdTypeCode.parse("TXID"));
         assertEquals(TaxPayerIdTypeCode.ID_CARD_NUMBER.getTaxPlayerIdCode(), "NIDN");
         assertEquals(TaxPayerIdTypeCode.PASSPORT_NUMBER.getTaxPlayerIdCode(), "CCPT");
         assertEquals(TaxPayerIdTypeCode.OTHER_ID.getTaxPlayerIdCode(), "OTHR");
