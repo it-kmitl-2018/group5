@@ -6,8 +6,8 @@ import org.joda.time.DateTime;
 @Builder(builderClassName = "Builder")
 public class ProductInformationForm {
 
-    public String productID;
-    public String productGlobalID;
+    public String productId;
+    public String productGlobalId;
     public String productName;
     public String productBatchId;
     public DateTime productExpiryDate;
@@ -15,11 +15,11 @@ public class ProductInformationForm {
     public ProductInformationForm() {
     }
 
-    public ProductInformationForm(String productID, String productGlobalID, String productName,
+    public ProductInformationForm(String productId, String productGlobalId, String productName,
                                   String productBatchId, DateTime productExpiryDate) {
 
-        this.productID = productID;
-        this.productGlobalID = productGlobalID;
+        this.productId = productId;
+        this.productGlobalId = productGlobalId;
         this.productName = productName;
         this.productBatchId = productBatchId;
         this.productExpiryDate = productExpiryDate;

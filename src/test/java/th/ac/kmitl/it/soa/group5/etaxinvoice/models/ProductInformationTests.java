@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProductInformationTests {
 
-    private String productID = "ABCDEFGHIJKLMNOPQRST123456789012345";
-    private String productGlobalID = "12345678901234";
+    private String productId = "ABCDEFGHIJKLMNOPQRST123456789012345";
+    private String productGlobalId = "12345678901234";
     private String productName = "Potato chips";
     private String productBatchId = "01234";
     private DateTime productExpiryDate = new DateTime( "2019-01-01T12:00:00+01:00" );
@@ -18,15 +18,15 @@ public class ProductInformationTests {
 
         ProductInformation.Builder builder = new ProductInformation.Builder();
         ProductInformation exdoc = builder
-                .productID(this.productID)
-                .productGlobalID(this.productGlobalID)
+                .productId(this.productId)
+                .productGlobalId(this.productGlobalId)
                 .productName(this.productName)
                 .productBatchId(this.productBatchId)
                 .productExpiryDate(this.productExpiryDate)
                 .build();
 
-        assertEquals(this.productID, exdoc.productID);
-        assertEquals(this.productGlobalID, exdoc.productGlobalID);
+        assertEquals(this.productId, exdoc.productId);
+        assertEquals(this.productGlobalId, exdoc.productGlobalId);
         assertEquals(this.productName, exdoc.productName);
         assertEquals(this.productBatchId, exdoc.productBatchId);
         assertEquals(this.productExpiryDate, exdoc.productExpiryDate);

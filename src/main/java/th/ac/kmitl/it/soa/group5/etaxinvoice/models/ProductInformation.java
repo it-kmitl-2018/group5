@@ -6,8 +6,8 @@ import org.joda.time.DateTime;
 @Builder(builderClassName = "Builder")
 public class ProductInformation {
 
-    public String productID;
-    public String productGlobalID;
+    public String productId;
+    public String productGlobalId;
     public String productName;
     public String productBatchId;
     public DateTime productExpiryDate;
