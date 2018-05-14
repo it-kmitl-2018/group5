@@ -2,6 +2,9 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.definitions;
 
 import lombok.Getter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum TaxPayerIdTypeCode {
 
     TAX_ID ("TXID", "เลขประจำตัวผู้เสียภาษีอากรสำหรับนิติบัคคล 13 หลัก รวมเลขสาขาอีก 5 หลัก"),
@@ -16,12 +19,15 @@ public enum TaxPayerIdTypeCode {
         this.taxPlayerIdName = taxPlayerIdName;
     }
 
-    public String GetName(){
-        return taxPlayerIdName;
+    public static Map<String, TaxPayerIdTypeCode> mapper = new HashMap<>();
+    static {
+        for (TaxPayerIdTypeCode taxPayerIdTypeCode : TaxPayerIdTypeCode.values()) {
+            mapper.put(taxPayerIdTypeCode.getTaxPlayerIdCode(), taxPayerIdTypeCode);
+        }
     }
 
-    public String GetCode(){
-        return taxPlayerIdCode;
+    public static TaxPayerIdTypeCode parse(String taxPlayerIdCode) {
+        return mapper.get(taxPlayerIdCode);
     }
 }
 
