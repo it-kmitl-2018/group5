@@ -5,12 +5,12 @@ public class NetValueCalculate {
 
     NetValueCalculate netVal = new NetValueCalculate();
     float totalProductValue = netVal.totalProductValue();
-    float discountCalculate = netVal.discountCalculate();
-    float chargeCalculate = netVal.chargeCalculate();
+    float calculateDiscount = netVal.calculateDiscount();
+    float calculateCharge = netVal.calculateCharge();
     float vatRate = netVal.vatRate();
-    float netAmountNoneVatCalculate = netVal.netAmountNoneVatCalculate();
-    float vatCalculate = netVal.vatCalculate();
-    float netValueCalculate = netVal.netValueCalculate();
+    float calculateNetAmountNoneVat = netVal.calculateNetAmountNoneVat();
+    float calculateVat = netVal.calculateVat();
+    float calculateNetValue = netVal.calculateNetValue();
 
     public float totalProductValue() {
         //TODO
@@ -18,14 +18,14 @@ public class NetValueCalculate {
         return totalproductValue;
     }
 
-    public float discountCalculate() {
+    public float calculateDiscount() {
         // TODO
         float discount = 0;
         float discountCal = (discount * totalProductValue)/100;
         return discountCal;
     }
 
-    public float chargeCalculate() {
+    public float calculateCharge() {
         // TODO
         float charge = 0;
         float chargeCal = (charge * totalProductValue)/100;
@@ -38,18 +38,18 @@ public class NetValueCalculate {
         return vatRate;
     }
 
-    public float netAmountNoneVatCalculate() {
-        float netAmountNoneVatCal = (totalProductValue - discountCalculate) + chargeCalculate;
+    public float calculateNetAmountNoneVat() {
+        float netAmountNoneVatCal = (totalProductValue - calculateDiscount) + calculateCharge;
         return netAmountNoneVatCal;
     }
 
-    public float vatCalculate() {
-        float vatCal = (vatRate * netAmountNoneVatCalculate)/100;
+    public float calculateVat() {
+        float vatCal = (vatRate * calculateNetAmountNoneVat)/100;
         return vatCal;
     }
 
-    public float netValueCalculate() {
-        float netValueCalculate = netAmountNoneVatCalculate + vatCalculate;
-        return netValueCalculate;
+    public float calculateNetValue() {
+        float netValueCal = calculateNetAmountNoneVat + calculateVat;
+        return netValueCal;
     }
 }
