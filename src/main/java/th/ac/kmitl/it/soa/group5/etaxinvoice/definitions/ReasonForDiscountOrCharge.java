@@ -2,7 +2,11 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.definitions;
 
 import lombok.Getter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum ReasonForDiscountOrCharge {
+
     STAMP_DUTY ("28", "ค่าอากรสแตมป์"),
     BANK_CHARGES ("30", "ค่าธรรมเนียมที่เกิดจากการทำุรกรรมกับธนาคาร"),
     MINIMUM_COMMISSION ("52", "ค่าดำเนินการขั้นต่ำ"),
@@ -24,5 +28,23 @@ public enum ReasonForDiscountOrCharge {
     ReasonForDiscountOrCharge(String reasonCode, String reason) {
         this.reasonCode = reasonCode;
         this.reason = reason;
+    }
+
+    public static Map<String, ReasonForDiscountOrCharge> mapper = new HashMap<>();
+    static {
+        for (ReasonForDiscountOrCharge reasonForDiscountOrCharge :
+                ReasonForDiscountOrCharge.values()) {
+            mapper.put(reasonForDiscountOrCharge.getReasonCode(), reasonForDiscountOrCharge);
+        }
+    }
+
+    public static ReasonForDiscountOrCharge parse(String reasonCode) {
+        ReasonForDiscountOrCharge reasonForDiscountOrCharge = mapper.get(reasonCode);
+
+        if (reasonForDiscountOrCharge == null) {
+            throw new IllegalArgumentException("There is no value with reason" + reasonCode);
+        }
+
+        return mapper.get(reasonCode);
     }
 }
