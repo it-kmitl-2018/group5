@@ -1,4 +1,4 @@
-package th.ac.kmitl.it.soa.group5.etaxinvoice;
+package th.ac.kmitl.it.soa.group5.etaxinvoice.definitions;
 
 import org.junit.Test;
 import th.ac.kmitl.it.soa.group5.etaxinvoice.definitions.ReferenceTypeCode;
