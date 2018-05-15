@@ -2,7 +2,7 @@ package th.ac.kmitl.it.soa.group5.etaxinvoice.models;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TradeSettlementMonetarySummationTests {
     private float lineTotalAmount = (float)500.00;
@@ -13,22 +13,22 @@ public class TradeSettlementMonetarySummationTests {
     private float chargeTotalAmount = (float) 200.34;
 
     @Test
-    public void getValueFromExchangedDocumentModel(){
+    public void getValueFromExchangedDocumentModel() {
+        TradeSettlementMonetarySummation.Builder builder = new TradeSettlementMonetarySummation.Builder();
+        TradeSettlementMonetarySummation exdoc = builder
+                .lineTotalAmount(this.lineTotalAmount)
+                .taxBasisTotalAmount(this.taxBasisTotalAmount)
+                .taxTotalAmount(this.taxTotalAmount)
+                .grandTotalAmount(this.grandTotalAmount)
+                .allowanceTotalAmount(this.allowanceTotalAmount)
+                .chargeTotalAmount(this.chargeTotalAmount)
+                .build();
 
-        TradeSettlementMonetarySummation tradeSettlementMonetarySummation = new TradeSettlementMonetarySummation();
-        tradeSettlementMonetarySummation.setLineTotalAmount(this.lineTotalAmount);
-        tradeSettlementMonetarySummation.setTaxBasisTotalAmount(this.taxBasisTotalAmount);
-        tradeSettlementMonetarySummation.setTaxTotalAmount(this.taxTotalAmount);
-        tradeSettlementMonetarySummation.setGrandTotalAmount(this.grandTotalAmount);
-        tradeSettlementMonetarySummation.setAllowanceTotalAmount(this.allowanceTotalAmount);
-        tradeSettlementMonetarySummation.setChargeTotalAmount(this.chargeTotalAmount);
-
-        assertEquals(lineTotalAmount, tradeSettlementMonetarySummation.getLineTotalAmount(), 0);
-        assertEquals(taxBasisTotalAmount, tradeSettlementMonetarySummation.getTaxBasisTotalAmount(), 0);
-        assertEquals(taxTotalAmount, tradeSettlementMonetarySummation.getTaxTotalAmount(), 0);
-        assertEquals(grandTotalAmount, tradeSettlementMonetarySummation.getGrandTotalAmount(), 0);
-        assertEquals(allowanceTotalAmount, tradeSettlementMonetarySummation.getAllowanceTotalAmount(), 0);
-        assertEquals(chargeTotalAmount, tradeSettlementMonetarySummation.getChargeTotalAmount(), 0);
-
-        }
+        assertEquals(this.lineTotalAmount, exdoc.lineTotalAmount);
+        assertEquals(this.taxBasisTotalAmount, exdoc.taxBasisTotalAmount);
+        assertEquals(this.taxTotalAmount, exdoc.taxTotalAmount);
+        assertEquals(this.grandTotalAmount, exdoc.grandTotalAmount);
+        assertEquals(this.allowanceTotalAmount, exdoc.allowanceTotalAmount);
+        assertEquals(this.chargeTotalAmount, exdoc.chargeTotalAmount);
+    }
 }
